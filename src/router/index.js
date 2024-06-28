@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
-import Dashboard from "../views/Dashboard.vue";
 import Docsboard from "../views/Docsboard.vue";
 import Docs from "../views/Docs.vue";
+import Documents from "../views/Documents.vue";
 
 const routes = [
   {
@@ -10,9 +10,9 @@ const routes = [
     redirect: "/reader-doc",
   },
   {
-    path: "/dashboard-default",
-    name: "Reader",
-    component: Dashboard,
+    path: "/Documents",
+    name: "Documents",
+    component: Documents,
   },
   {
     path: "/Docs",

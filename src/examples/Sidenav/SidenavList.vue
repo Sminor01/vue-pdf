@@ -21,6 +21,19 @@ const getRoute = () => {
     id="sidenav-collapse-main"
   >
     <ul class="navbar-nav">
+
+      <li class="nav-item">
+        <sidenav-item
+          to="/Documents"
+          :class="getRoute() === 'Documents' ? 'active' : ''"
+          :navText="'Documents'"
+        >
+          <template v-slot:icon>
+            <i class="ni ni-tv-2 text-primary text-sm opacity-10"></i>
+          </template>
+        </sidenav-item>
+      </li>
+
       <li class="nav-item">
         <sidenav-item
           to="/Docsboard"

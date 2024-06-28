@@ -13,5 +13,10 @@ import AuthorsTable from "./components/ListDoscBoard.vue";
         <projects-table />
       </div>
     </div>
+    <div class="mt-4 row">
+      <div class="col-12">
+        <documents-list />
+      </div>
+    </div>
   </div>
 </template>
