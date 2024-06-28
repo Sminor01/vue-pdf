@@ -33,17 +33,10 @@ const darkMode = () => {
 </script>
 <template>
   <div class="fixed-plugin">
-    <a
-      class="px-3 py-2 fixed-plugin-button text-dark position-fixed"
-      @click="toggleConfigurator"
-    >
-      <i class="py-2 fa fa-cog"></i>
-    </a>
     <div class="shadow-lg card">
       <div class="pt-3 pb-0 bg-transparent card-header">
         <div class="" :class="isRTL ? 'float-end' : 'float-start'">
-          <h5 class="mt-3 mb-0">Argon Configurator</h5>
-          <p>See our dashboard options.</p>
+          <h5 class="mt-3 mb-0">Настройка внешнего вида</h5>
         </div>
         <div
           class="mt-4"
@@ -60,7 +53,7 @@ const darkMode = () => {
       <div class="pt-0 card-body pt-sm-3">
         <!-- Sidebar Backgrounds -->
         <div>
-          <h6 class="mb-0">Sidebar Colors</h6>
+          <h6 class="mb-0">Цвета боковых вкладок</h6>
         </div>
         <a href="#" class="switch-trigger background-color">
           <div
@@ -101,8 +94,8 @@ const darkMode = () => {
         </a>
         <!-- Sidenav Type -->
         <div class="mt-3">
-          <h6 class="mb-0">Sidenav Type</h6>
-          <p class="text-sm">Choose between 2 different sidenav types.</p>
+          <h6 class="mb-0">Цвет боковой панели</h6>
+          <p class="text-sm">Можете выбрать два цвета.</p>
         </div>
         <div class="d-flex gap-2">
           <button
@@ -115,7 +108,7 @@ const darkMode = () => {
             "
             @click="setSidebarType('bg-white')"
           >
-            White
+            Белый
           </button>
           <button
             id="btn-dark"
@@ -127,7 +120,7 @@ const darkMode = () => {
             "
             @click="setSidebarType('bg-default')"
           >
-            Dark
+            Темный
           </button>
         </div>
         <p class="mt-2 text-sm d-xl-none d-block">
@@ -136,7 +129,7 @@ const darkMode = () => {
         <!-- Navbar Fixed -->
         <!-- Navbar Fixed -->
         <div class="mt-3 d-flex">
-          <h6 class="mb-0">Navbar Fixed</h6>
+          <h6 class="mb-0">Фиксировать панель</h6>
           <div class="form-check form-switch ps-0 ms-auto my-auto">
             <input
               class="mt-1 form-check-input"
@@ -151,7 +144,7 @@ const darkMode = () => {
 
         <hr class="horizontal dark my-4" />
         <div class="mt-2 mb-5 d-flex">
-          <h6 class="mb-0" :class="isRTL ? 'ms-2' : ''">Light / Dark</h6>
+          <h6 class="mb-0" :class="isRTL ? 'ms-2' : ''">Светлый / Темный </h6>
           <div class="form-check form-switch ps-0 ms-auto my-auto">
             <input
               class="form-check-input mt-1 ms-auto"
@@ -160,42 +153,6 @@ const darkMode = () => {
               @click="darkMode"
             />
           </div>
-        </div>
-        <a
-          class="btn bg-gradient-dark w-100"
-          href="https://www.creative-tim.com/product/vue-argon-dashboard"
-          >Free Download</a
-        >
-        <a
-          class="btn btn-outline-dark w-100"
-          href="https://www.creative-tim.com/learning-lab/vue/overview/argon-dashboard/"
-          >View documentation</a
-        >
-        <div class="text-center w-100">
-          <a
-            class="github-button"
-            href="https://github.com/creativetimofficial/vue-argon-dashboard"
-            data-icon="octicon-star"
-            data-size="large"
-            data-show-count="true"
-            aria-label="Star creativetimofficial/vue-argon-dashboard on GitHub"
-            >Star</a
-          >
-          <h6 class="mt-3">Thank you for sharing!</h6>
-          <a
-            href="https://twitter.com/intent/tweet?text=Check%20Vue%20Argon%20Dashboard%202%20made%20by%20%40CreativeTim%20%23webdesign%20%23dashboard%20%vuejs3&amp;url=https%3A%2F%2Fwww.creative-tim.com%2Fproduct%vue-argon-dashboard"
-            class="mb-0 btn btn-dark me-2"
-            target="_blank"
-          >
-            <i class="fab fa-twitter me-1" aria-hidden="true"></i> Tweet
-          </a>
-          <a
-            href="https://www.facebook.com/sharer/sharer.php?u=https://www.creative-tim.com/product/vue-argon-dashboard"
-            class="mb-0 btn btn-dark me-2"
-            target="_blank"
-          >
-            <i class="fab fa-facebook-square me-1" aria-hidden="true"></i> Share
-          </a>
         </div>
       </div>
     </div>

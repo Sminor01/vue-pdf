@@ -1,17 +1,17 @@
 {
-  "name": "vue-argon-dashboard-2",
+  "name": "vue-pdf",
   "version": "4.0.0",
-  "private": true,
-  "author": "Creative Tim",
-  "license": "SEE LICENSE IN <https://www.creative-tim.com/license>",
-  "description": "VueJS version of Argon Dashboard 2 by Creative Tim",
-  "homepage": "https://demos.creative-tim.com/vue-argon-dashboard/",
+  "private": false,
+  "author": "",
+  "license": "",
+  "description": "",
+  "homepage": "",
   "bugs": {
-    "url": "https://github.com/creativetimofficial/vue-argon-dashboard/issues"
+    "url": ""
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/creativetimofficial/vue-argon-dashboard.git"
+    "url": ""
   },
   "scripts": {
     "serve": "vue-cli-service serve",
