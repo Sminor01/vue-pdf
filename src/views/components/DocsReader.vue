@@ -1,11 +1,3 @@
-<!-- <script setup>
-// import FilesList from "./components/FilesList.vue";
-</script>
-<template>
-  <div></div>
-</template> -->
-
-
 <template>
     <div class="card">
       <div class="card-header pb-0">

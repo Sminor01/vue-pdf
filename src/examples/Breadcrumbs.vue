@@ -31,7 +31,7 @@ defineProps({
           class="opacity-5 ps-2"
           href="#"
           :class="isNavFixed ? 'text-dark' : 'text-white'"
-          >لوحات القيادة</a
+          ></a
         >
         <a
           v-else
