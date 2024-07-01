@@ -36,8 +36,8 @@ const getRoute = () => {
 
       <li class="nav-item">
         <sidenav-item
-          to="/Docsboard"
-          :class="getRoute() === 'Docsboard' ? 'active' : ''"
+          to="/DocsReader"
+          :class="getRoute() === 'Reader' ? 'active' : ''"
           :navText="'Reader'"
         >
           <template v-slot:icon>
@@ -48,8 +48,8 @@ const getRoute = () => {
 
       <li class="nav-item">
         <sidenav-item
-          to="/Docs"
-          :class="getRoute() === 'Docs' ? 'active' : ''"
+          to="/DocsEditor"
+          :class="getRoute() === 'Editor' ? 'active' : ''"
           :navText="'Editor'"
         >
           <template v-slot:icon>

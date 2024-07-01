@@ -1,6 +1,6 @@
 <script setup>
-import DefaultDashboard from "@/views/dashboards/Default.vue";
+import Documents from "@/views/dashboards/Documents.vue";
 </script>
 <template>
-  <default-dashboard />
+  <Documents />
 </template>

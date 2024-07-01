@@ -1,13 +1,13 @@
 import { createRouter, createWebHistory } from "vue-router";
-import Docsboard from "../views/Docsboard.vue";
-import Docs from "../views/Docs.vue";
+import DocsReader from "../views/DocsReader.vue"
+import DocsEditor from "../views/DocsEditor.vue";
 import Documents from "../views/Documents.vue";
 
 const routes = [
   {
     path: "/",
     name: "/",
-    redirect: "/reader-doc",
+    redirect: "/Documents",
   },
   {
     path: "/Documents",
@@ -15,14 +15,14 @@ const routes = [
     component: Documents,
   },
   {
-    path: "/Docs",
-    name: "Docs",
-    component: Docs,
+    path: "/DocsEditor",
+    name: "Editor",
+    component: DocsEditor,
   },
   {
-    path: "/Docsboard",
-    name: "Docsboard",
-    component: Docsboard,
+    path: "/DocsReader",
+    name: "Reader",
+    component: DocsReader,
   },
 ];
 
