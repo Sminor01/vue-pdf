@@ -1,30 +1,17 @@
-<!-- <script>
-{
-  addNewPageButtonHandler() {
-      this.addNewPage();
-      this.fetchPageData({
-        projectId: Number(this.$route.params.projectId),
-        pageId: Number(this.$route.params.pageId)
-      })
-    },
+<script>
+</script>
 
-}
-</script> -->
 
 <template>
   <div class="card">
     <div class="card-header card-position pb-0">
       <h6>Список документов</h6>
-      <!-- <template>
-        <template #optionsHead>
-          <button
-            class="button apply"
-            @click="addNewPageButtonHandler()"
-          >
-            Создать новую страницу
-          </button>
-        </template>
-      </template> -->
+      <div class = "">
+        <div id="app">
+          <button v-on:click="increase(3, $event)">Создать новый документ</button>
+          <div>{{modalwindow}}</div>
+          </div>
+      </div>
     </div>
     <div class="card-body px-0 pt-0 pb-2">
       <div class="table-responsive p-0">
