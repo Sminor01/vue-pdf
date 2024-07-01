@@ -1,7 +1,8 @@
 <template>
     <div class="card">
-      <div class="card-header pb-0">
+      <div class="card-header card-position pb-0">
         <h6>Список документов</h6>
+        <button class="bnt ">Добавить новый документ</button>
       </div>
       <div class="card-body px-0 pt-0 pb-2">
         <div class="table-responsive p-0">
@@ -41,7 +42,7 @@
                     <div class="d-flex flex-column justify-content-center">
                       <h6 class="mb-0 text-sm">Годовой отчёт</h6>
                       <p class="text-xs text-secondary mb-0">
-                        отчёт
+                        Отчёт
                       </p>
                     </div>
                   </div>
@@ -58,7 +59,19 @@
                     >23/04/22</span
                   >
                 </td>
-
+                <td class="align-middle">
+                    <a href="javascript:;" 
+                      class="text-secondary font-weight-bold text-xs"
+                      data-toggle="tooltip"
+                      data-original-title="Edit user"> Edit
+                    </a>
+                    <span>/</span>
+                    <a href="javascript:;" 
+                      class="text-secondary font-weight-bold text-xs"
+                      data-toggle="tooltip"
+                      data-original-title="Edit user"> Delete
+                    </a>
+                </td>
               </tr>
               <tr>
                 <td>
@@ -68,7 +81,7 @@
                     <div class="d-flex flex-column justify-content-center">
                       <h6 class="mb-0 text-sm">Документ рассылка</h6>
                       <p class="text-xs text-secondary mb-0">
-                        коммерческое предложение 
+                        Коммерческое предложение 
                       </p>
                     </div>
                   </div>
@@ -84,7 +97,21 @@
                 </td>
                 <td class="align-middle text-center">
                   <span class="text-secondary text-xs font-weight-bold"
-                    >11/01/19</span>
+                    >11/01/19</span
+                  >
+                </td>
+                <td class="align-middle">
+                    <a href="javascript:;" 
+                      class="text-secondary font-weight-bold text-xs"
+                      data-toggle="tooltip"
+                      data-original-title="Edit user"> Edit
+                    </a>
+                    <span>/</span>
+                    <a href="javascript:;" 
+                      class="text-secondary font-weight-bold text-xs"
+                      data-toggle="tooltip"
+                      data-original-title="Edit user"> Delete
+                    </a>
                 </td>
               </tr>
             </tbody>

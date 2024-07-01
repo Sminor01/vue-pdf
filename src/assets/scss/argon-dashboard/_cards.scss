@@ -4,6 +4,12 @@
     padding: $card-header-padding;
   }
 
+.card-position {
+  display: inline-block;
+  align-items: center;
+  justify-items: flex-end;  
+}
+
   .card-body {
     font-family: $font-family-sans-serif;
     padding: $card-body-padding;
