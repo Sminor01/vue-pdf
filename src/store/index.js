@@ -1,6 +1,21 @@
 import { createStore } from "vuex";
+import ProjectsStore from './modules/Projects';
+import ProjectPagesStore from './modules/ProjectPages';
+import EditPageStore from './modules/EditPage';
+import InputModalStore from './modules/modals/inputModal';
+import OptionsModalStore from './modules/modals/optionsModal';
+import PreviewPage from "./modules/PreviewPage";
 
 export default createStore({
+  modulas: {
+    EditPageStore,
+    PreviewPage,
+    ProjectPagesStore,
+    ProjectsStore,
+
+    OptionsModalStore,
+    InputModalStore
+  },
   state: {
     hideConfigButton: false,
     isPinned: false,

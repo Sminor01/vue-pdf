@@ -1,6 +1,85 @@
 <script>
-</script>
+import { mapActions, mapGetters, mapMutations } from 'vuex';
+import ProjectList from '@/components/ProjectPages/PagesList.vue';
+import InputModalLayout from "@/components/Modals/InputModal.vue";
+export default {
+  name: 'ProjectsView',
 
+  components: {
+    ProjectList,
+    InputModalLayout,
+  },
+
+  data() {
+    return {
+      inputValue: "",
+      error: false
+    }
+  },
+
+  computed: {
+    ...mapGetters( [
+      'allProjects',
+      'getModalContent',
+      'getModalState'
+    ] ),
+  },
+
+  watch: {
+    getModalContent: function () {
+      this.inputValue = this.getModalContent.projectTitle;
+    }
+  },
+
+  mounted() {
+    this.fetchProjects();
+  },
+
+  methods: {
+    ...mapActions( ['fetchProjects'] ),
+    ...mapMutations( [
+      'updateProjects',
+      'addProject',
+      'renameProject',
+      'changeModalState'
+    ] ),
+
+    checkInputValue( inputValue, currentValue ) {
+      for (let projectItem of this.allProjects) {
+        let projectTitle = projectItem.title.toLowerCase().split(" ").join("");
+        let newProjectTitle = inputValue.toLowerCase().split(" ").join("");
+
+        if ((projectTitle === newProjectTitle) && (newProjectTitle !== currentValue.toLowerCase().split(" ").join(""))) {
+          this.error = true;
+          break;
+        }
+        else {
+          this.error = false;
+        }
+      }
+    },
+
+    applyButtonHandler( inputValue, id ) {
+      if (this.getModalContent.action === "Create") {
+        this.addProject(inputValue);
+      }
+      else if (this.getModalContent.action === "Rename") {
+        this.renameProject({
+          newTitle: inputValue,
+          id: id,
+        });
+      }
+      this.closeModal();
+    },
+
+    closeModal() {
+      this.inputValue = "";
+      this.error = false;
+      this.changeModalState();
+    }
+  },
+}
+</script>
 
 <template>
   <div class="card">
@@ -43,6 +122,14 @@
             </tr>
           </thead>
           <tbody>
+
+            <ProjectList :all-projects="allProjects" />
+
+            <InputModalLayout
+              id="modal"
+              :class="{'modal': getModalState, 'visually-hidden': !getModalState}">
+            </InputModalLayout>
+          
           </tbody>
         </table>
       </div>
