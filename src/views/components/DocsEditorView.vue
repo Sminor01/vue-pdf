@@ -1,9 +1,9 @@
 <script>
 import { mapActions, mapGetters, mapMutations } from 'vuex';
 import ProjectList from '@/components/ProjectPages/PagesList.vue';
-import InputModalLayout from "@/components/Modals/InputModal.vue";
+import InputModalLayout from "@/components/modals/InputModal.vue";
 export default {
-  name: 'ProjectsView',
+  name: 'EditorView',
 
   components: {
     ProjectList,
