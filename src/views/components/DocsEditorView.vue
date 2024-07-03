@@ -1,13 +1,13 @@
 <script>
 import { mapActions, mapGetters, mapMutations } from 'vuex';
-import ProjectList from '@/components/ProjectPages/PagesList.vue';
-import InputModalLayout from "@/components/modals/InputModal.vue";
+import InputModalLayout from '@/components/modals/InputModal.vue';
+import ProjectsList from '@/components/ProjectsView/ProjectsList.vue';
 export default {
   name: 'EditorView',
 
   components: {
-    ProjectList,
     InputModalLayout,
+    ProjectsList,
   },
 
   data() {
@@ -80,16 +80,11 @@ export default {
   },
 }
 </script>
-
 <template>
   <div class="card">
     <div class="card-header card-position pb-0">
       <h6>Список документов</h6>
       <div class = "">
-        <div id="app">
-          <button v-on:click="increase(3, $event)">Создать новый документ</button>
-          <div>{{modalwindow}}</div>
-          </div>
       </div>
     </div>
     <div class="card-body px-0 pt-0 pb-2">
@@ -122,9 +117,9 @@ export default {
             </tr>
           </thead>
           <tbody>
-
-            <ProjectList :all-projects="allProjects" />
-
+            
+            <ProjectsList :all-projects="allProjects" /> 
+      
             <InputModalLayout
               id="modal"
               :class="{'modal': getModalState, 'visually-hidden': !getModalState}">

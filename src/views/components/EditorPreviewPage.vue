@@ -1,5 +1,5 @@
 <script>
-import PageLayout from "../../components/global/PageBlocks.vue"
+import PageLayout from "@/components/global/PageBlocks.vue"
 import { mapActions, mapMutations, mapGetters } from "vuex";
 
 export default {

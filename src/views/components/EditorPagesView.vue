@@ -1,15 +1,9 @@
 <script>
 import { mapActions, mapGetters, mapMutations } from 'vuex';
-//import Header from "@/components/global/Header";
-//import Footer from "@/components/global/Footer";
 
-// import PagesPanel from "@/components/ProjectPages/PagesPanel";
-// import PagesList from "@/components/ProjectPages/PagesList";
-// import InputModalLayout from "@/components/modals/InputModal";
-
-import PagesPanel from "../../components/ProjectPages/PagesPanel.vue"
-import PagesList from "../../components/ProjectPages/PagesList.vue"
-import InputModalLayout from '../../components/Modals/InputModal.vue';
+import PagesPanel from "@/components/ProjectPages/PagesPanel.vue"
+import PagesList from "@/components/ProjectPages/PagesList.vue"
+import InputModalLayout from '@/components/Modals/InputModal.vue';
 
 export default {
   name: 'ProjectPagesView',

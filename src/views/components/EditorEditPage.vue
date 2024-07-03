@@ -1,10 +1,10 @@
 <script>
   import {mapActions, mapGetters, mapMutations} from "vuex";
 //   import Header from "@/components/global/Header";
-  import OptionsList from "../../components/global/OptionsList.vue"
-  import InputModal from "../../components/Modals/InputModal.vue";
-  import OptionsModal from "../../components/Modals/OptionsModal.vue"; 
-  import PageBlocks from '../../components/global/PageBlocks.vue'
+  import OptionsList from "@/components/global/OptionsList.vue"
+  import InputModal from "@/components/Modals/InputModal.vue";
+  import OptionsModal from "@/components/Modals/OptionsModal.vue"; 
+  import PageBlocks from '@/components/global/PageBlocks.vue'
   
   export default {
     name: "EditPage",
