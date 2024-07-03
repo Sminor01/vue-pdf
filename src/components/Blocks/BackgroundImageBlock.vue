@@ -1,3 +1,43 @@
+<script>
+import { mapMutations } from "vuex";
+
+export default {
+  name: "BackgroundImageBlock",
+
+  props: {
+    blockId: {
+      type: Number,
+      default: 0,
+    }
+  },
+
+  methods: {
+    ...mapMutations( [
+      'setBlockTitle',
+      'setBlockDescription'
+    ] ),
+
+    changeBlockTitle( event ) {
+      let obj = {
+        id: this.blockId,
+        title: event.target.innerText
+      }
+
+      this.setBlockTitle( obj );
+    },
+
+    changeBlockDescription( event ) {
+      let obj = {
+        id: this.blockId,
+        description: event.target.innerText
+      }
+
+      this.setBlockDescription( obj );
+    }
+  }
+}
+</script>
+
 <template>
     <section
       class="background-image-block"
@@ -23,43 +63,3 @@
       </div>
     </section>
   </template>
-  
-  <script>
-  import { mapMutations } from "vuex";
-  
-  export default {
-    name: "BackgroundImageBlock",
-  
-    props: {
-      blockId: {
-        type: Number,
-        default: 0,
-      }
-    },
-  
-    methods: {
-      ...mapMutations( [
-        'setBlockTitle',
-        'setBlockDescription'
-      ] ),
-  
-      changeBlockTitle( event ) {
-        let obj = {
-          id: this.blockId,
-          title: event.target.innerText
-        }
-  
-        this.setBlockTitle( obj );
-      },
-  
-      changeBlockDescription( event ) {
-        let obj = {
-          id: this.blockId,
-          description: event.target.innerText
-        }
-  
-        this.setBlockDescription( obj );
-      }
-    }
-  }
-  </script>

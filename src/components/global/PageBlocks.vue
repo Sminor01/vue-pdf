@@ -1,3 +1,109 @@
+<script>
+// import BackgroundImageBlock from "@/components/blocks/BackgroundImageBlock";
+// import TextBlock from "@/components/blocks/TextBlock";
+import BackgroundImageBlock from '../blocks/BackgroundImageBlock.vue';
+import TextBlock from "../../components/blocks/TextBlock.vue"
+
+import { mapMutations, mapGetters } from 'vuex';
+
+export default {
+  name: "PageLayout",
+
+  components: {
+    BackgroundImageBlock,
+    TextBlock
+  },
+ 
+  props: {
+    blocks: {
+      type: Array,
+      default() {
+        return []
+      }
+    },
+    activeOptionsModalSection: {
+      type: Number,
+      default: 0
+    }
+  },
+
+  computed: {
+    ...mapGetters( [
+      'getOptionsModalSections',
+      'getOptionsModalState',
+      'getSelectedBlock',
+    ] )
+  },
+
+  // eslint-disable-next-line vue/order-in-components
+  emits: {'closeOptionsModal': null, 'updateBlocks': null},
+
+  methods: {
+    ...mapMutations( [
+      'setOptionsModalSections',
+      'setOptionsModalOptions',
+      'setSelectedBlock',
+      'addNewBlock',
+      'removeBlock',
+      'moveBlock',
+      'changeBlockVisibility',
+    ] ),
+
+    addNewNoteButtonHandler( index ) {
+      this.setOptionsModalSections([
+        {
+          title: "Текстовые блоки",
+          code: 1,
+          options: [
+            {
+              title: "Блок с текстом",
+              code: 1,
+              description: "Блок, содержащий простой текст"
+            }
+          ]
+        },
+        {
+          title: "Обложки",
+          code: 2,
+          options: [
+            {
+              title: "Текст с фоновой картинкой",
+              code: 2,
+              description: "Блок, содержащий текст на фоне картинки"
+            }
+          ]
+        }
+      ]);
+      this.setSelectedBlock( index );
+      this.setOptionsModalOptions(this.getOptionsModalSections.find((el) => el.code === this.activeOptionsModalSection).options);
+      this.$emit("closeOptionsModal");
+    },
+
+    optionButtonHandler( code, duplicateBlock = {} ) {
+      this.addNewBlock( {
+        code: code,
+        index: this.getSelectedBlock,
+        duplicateBlock: duplicateBlock
+      } );
+
+      if (this.getOptionsModalState) this.$emit("closeOptionsModal");
+    },
+
+    removeBlockButtonHandler( id ) {
+      this.removeBlock( id );
+      this.$emit("updateBlocks");
+    },
+
+    moveBlockButtonHandler( index, direction ) {
+      this.moveBlock({
+        index: index,
+        direction: direction
+      } );
+    },
+  },
+}
+</script>
+
 <template>
   <div class="page-blocks">
     <button
@@ -177,107 +283,3 @@
     </div>
   </div>
 </template>
-
-<script>
-import BackgroundImageBlock from "@/components/blocks/BackgroundImageBlock";
-import TextBlock from "@/components/blocks/TextBlock";
-
-import { mapMutations, mapGetters } from 'vuex';
-
-export default {
-  name: "PageLayout",
-
-  components: {
-    BackgroundImageBlock,
-    TextBlock
-  },
-
-  props: {
-    blocks: {
-      type: Array,
-      default() {
-        return []
-      }
-    },
-    activeOptionsModalSection: {
-      type: Number,
-      default: 0
-    }
-  },
-
-  computed: {
-    ...mapGetters( [
-      'getOptionsModalSections',
-      'getOptionsModalState',
-      'getSelectedBlock',
-    ] )
-  },
-
-  // eslint-disable-next-line vue/order-in-components
-  emits: {'closeOptionsModal': null, 'updateBlocks': null},
-
-  methods: {
-    ...mapMutations( [
-      'setOptionsModalSections',
-      'setOptionsModalOptions',
-      'setSelectedBlock',
-      'addNewBlock',
-      'removeBlock',
-      'moveBlock',
-      'changeBlockVisibility',
-    ] ),
-
-    addNewNoteButtonHandler( index ) {
-      this.setOptionsModalSections([
-        {
-          title: "Текстовые блоки",
-          code: 1,
-          options: [
-            {
-              title: "Блок с текстом",
-              code: 1,
-              description: "Блок, содержащий простой текст"
-            }
-          ]
-        },
-        {
-          title: "Обложки",
-          code: 2,
-          options: [
-            {
-              title: "Текст с фоновой картинкой",
-              code: 2,
-              description: "Блок, содержащий текст на фоне картинки"
-            }
-          ]
-        }
-      ]);
-      this.setSelectedBlock( index );
-      this.setOptionsModalOptions(this.getOptionsModalSections.find((el) => el.code === this.activeOptionsModalSection).options);
-      this.$emit("closeOptionsModal");
-    },
-
-    optionButtonHandler( code, duplicateBlock = {} ) {
-      this.addNewBlock( {
-        code: code,
-        index: this.getSelectedBlock,
-        duplicateBlock: duplicateBlock
-      } );
-
-      if (this.getOptionsModalState) this.$emit("closeOptionsModal");
-    },
-
-    removeBlockButtonHandler( id ) {
-      this.removeBlock( id );
-      this.$emit("updateBlocks");
-    },
-
-    moveBlockButtonHandler( index, direction ) {
-      this.moveBlock({
-        index: index,
-        direction: direction
-      } );
-    },
-  },
-}
-</script>
