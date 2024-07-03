@@ -1,21 +1,4 @@
-<template>
-    <div>
-      <div class="sections">
-        <div class="sections__head">
-          <slot name="optionsModalHead" />
-        </div>
-        <slot name="optionsModalSections" />
-  
-        <div
-          class="sections__options"
-        >
-          <slot name="optionsModalOptions" />
-        </div>
-      </div>
-    </div>
-  </template>
-  
-  <script>
+<script>
   import { mapMutations, mapGetters } from "vuex";
   
   export default {
@@ -38,3 +21,19 @@
     }
   }
   </script>
+<template>
+    <div>
+      <div class="sections">
+        <div class="sections__head">
+          <slot name="optionsModalHead" />
+        </div>
+        <slot name="optionsModalSections" />
+  
+        <div
+          class="sections__options"
+        >
+          <slot name="optionsModalOptions" />
+        </div>
+      </div>
+    </div>
+  </template>

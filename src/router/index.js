@@ -2,8 +2,8 @@ import { createRouter, createWebHistory } from "vue-router";
 import DocsReader from "../views/DocsReader.vue"
 import DocsEditor from "../views/DocsEditor.vue";
 import Documents from "../views/Documents.vue";
-
-const routes = [
+import EditorEditPage from "../views/components/EditorEditPage.vue";
+ const routes = [
   {
     path: "/",
     name: "/",
@@ -13,6 +13,11 @@ const routes = [
     path: "/Documents",
     name: "Documents",
     component: Documents,
+  },
+  {
+    path: "/EditorEditPage",
+    name: "EditorEditPage",
+    component: EditorEditPage,
   },
   {
     path: "/DocsEditor",
