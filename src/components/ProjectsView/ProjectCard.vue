@@ -90,7 +90,7 @@
 </template>
 
 <script>
-import OptionsList from '@/components/global/OptionsList';
+import OptionsList from '../../components/global/OptionsList.vue';
 import { mapMutations} from "vuex";
 
 export default {

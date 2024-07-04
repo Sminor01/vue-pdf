@@ -46,6 +46,8 @@ const navClasses = computed(() => {
 
     <router-view />
 
+    <!-- import SvgSprite from "../../components/global/SvgSprite"; -->
+
     <app-footer v-show="showFooter" />
 
     <configurator

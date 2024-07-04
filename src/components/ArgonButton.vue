@@ -24,7 +24,6 @@ defineProps({
 const getClasses = (variant, color, size, fullWidth, active) => {
   let colorValue, sizeValue, fullWidthValue, activeValue;
 
-  // Setting the button variant and color
   if (variant === "gradient") {
     colorValue = `bg-gradient-${color}`;
   } else if (variant === "outline") {

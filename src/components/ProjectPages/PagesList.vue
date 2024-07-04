@@ -1,5 +1,6 @@
 <script>
-import ProjectPage from "@/components/ProjectPages/ProjectPage";
+
+import ProjectPage from "../../components/ProjectPages/ProjectPage.vue"
 
 export default {
   name: "ProjectPagesList",

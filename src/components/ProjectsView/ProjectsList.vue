@@ -1,6 +1,6 @@
 <script>
 import { mapMutations } from 'vuex';
-import ProjectCard from '@/components/ProjectsView/ProjectCard';
+import ProjectCard from '../../components/ProjectsView/ProjectCard.vue';
 
 export default {
   name: "ProjectsList",
