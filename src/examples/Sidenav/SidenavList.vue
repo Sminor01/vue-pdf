@@ -26,8 +26,18 @@ const getRoute = () => {
         <sidenav-item
           to="/Documents"
           :class="getRoute() === 'Documents' ? 'active' : ''"
-          :navText="'Documents'"
-        >
+          :navText="'Documents'">
+          <template v-slot:icon>
+            <i class="ni ni-tv-2 text-primary text-sm opacity-10"></i>
+          </template>
+        </sidenav-item>
+      </li>
+
+      <li class="nav-item">
+        <sidenav-item
+          to="/DocumentsView"
+          :class="getRoute() === 'DocView' ? 'active' : ''"
+          :navText="'DocView'">
           <template v-slot:icon>
             <i class="ni ni-tv-2 text-primary text-sm opacity-10"></i>
           </template>

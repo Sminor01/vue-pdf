@@ -9,9 +9,8 @@ import DocumentsView from "../views/pages/DocumentsView.vue";
 
 const routes = [
   {
-    path: "/",
+    path: "/DocumentsView",
     name: "DocumentsView",
-    redirect: "/DocumentsView",
     component: DocumentsView,
   },
   {

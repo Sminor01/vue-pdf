@@ -38,7 +38,14 @@
       }
     }
   }
+  vbody {
+    tr:last-child {
+      td {
+        border-width: 100px;
+      }
+    }
 
+  }
   > :not(:last-child) > :last-child > * {
     border-bottom-color: $light;
   }
