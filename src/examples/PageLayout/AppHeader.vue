@@ -1,4 +1,4 @@
-<!-- <template>
+<template>
     <footer class="footer">
       <div class="container">
         <div class="wrapper row">
@@ -85,7 +85,4 @@
   export default {
     name: "FooterComponent",
   }
-  </script> -->
-  <template>
-    <div></div>
-  </template>
+  </script>
