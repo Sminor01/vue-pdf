@@ -29,6 +29,7 @@
                   Дата
                 </th>
                 <th class="text-center text-uppercase text-xxs font-weight-border opacity-7 text-secondary opacity-7">
+                  Просмотр документа 
                 </th>
               </tr>
             </thead>
@@ -58,7 +59,9 @@
                     >23/04/22</span
                   >
                 </td>
-
+                <td class="align-middle text-center">
+                    <button class=" bot-border text-secondary text-xs font-weight-bold" href="javascript:">edit</button>
+                </td>
               </tr>
               <tr>
                 <td>
@@ -86,6 +89,9 @@
                   <span class="text-secondary text-xs font-weight-bold"
                     >11/01/19</span>
                 </td>
+                <td class="align-middle text-center">
+                  <button class="text-secondary text-xs font-weight-bold" href="javascript:">edit</button>
+              </td>
               </tr>
             </tbody>
           </table>

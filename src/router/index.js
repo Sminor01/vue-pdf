@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
-import DocsReader from "../views/DocsReader.vue"
-import DocsEditor from "../views/DocsEditor.vue";
-import Documents from "../views/Documents.vue";
+import DocsReader from "../views/pages/DocsReader.vue"
+import DocsEditor from "../views/pages/DocsEditor.vue";
+import Documents from "../views/pages/Documents.vue";
 
 const routes = [
   {

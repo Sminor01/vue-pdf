@@ -1,5 +1,5 @@
 <script setup>
-import AuthorsTable from "./components/DocsReader.vue";
+import AuthorsTable from "../components/DocumentsList.vue";
 </script>
 <template>
   <div class="py-4 container-fluid">
@@ -11,11 +11,6 @@ import AuthorsTable from "./components/DocsReader.vue";
     <div class="mt-4 row">
       <div class="col-12">
         <projects-table />
-      </div>
-    </div>
-    <div class="mt-4 row">
-      <div class="col-12">
-        <documents-list />
       </div>
     </div>
   </div>
