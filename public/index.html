@@ -29,16 +29,18 @@
     />
 
     <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
 
   <body class="bg-gray-100">
     <noscript>
       <strong>
-        без js не будет работь
+        <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
       </strong>
     </noscript>
 
     <div id="app" class="g-sidenav-show"></div>
+
 
     <!-- built files will be auto injected -->
   </body>

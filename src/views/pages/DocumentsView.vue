@@ -1,17 +1,15 @@
-<!-- <script>
+<script>
 import { mapActions, mapGetters, mapMutations } from 'vuex';
 import ProjectList from '@/components/ProjectsView/ProjectsList';
 import InputModalLayout from "@/components/modals/InputModal";
-import AppFooter from '../../examples/PageLayout/AppFooter.vue';
-import AppHeader from '../../examples/PageLayout/AppHeader.vue';
+//import AppFooter from '../../examples/PageLayout/AppFooter.vue';
 
 export default {
-  name: 'ProjectsView',
+  name: 'DocumentsView',
 
   components: {
-    AppHeader,
     ProjectList,
-    AppFooter,
+    //AppFooter,
     InputModalLayout,
   },
 
@@ -186,9 +184,9 @@ export default {
         </button>
       </template>
     </InputModalLayout>
-  </template> -->
+  </template>
   
-  <script setup>
+  <!-- <script setup>
 import AuthorsTable from "../components/DocView.vue";
 </script>
 <template>
@@ -204,4 +202,4 @@ import AuthorsTable from "../components/DocView.vue";
       </div>
     </div>
   </div>
-</template>
+</template> -->
