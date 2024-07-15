@@ -5,6 +5,7 @@ import Sidenav from "./examples/Sidenav";
 import Configurator from "@/examples/Configurator.vue";
 import Navbar from "@/examples/Navbars/Navbar.vue";
 import AppFooter from "@/examples/Footer.vue";
+import SvgSprite from "../src/components/global/SvgSprite.vue";
 
 const store = useStore();
 const isNavFixed = computed(() => store.state.isNavFixed);
@@ -29,6 +30,7 @@ const navClasses = computed(() => {
   };
 });
 </script>
+
 <template>
   <div
     v-show="layout === 'landing'"
@@ -45,7 +47,8 @@ const navClasses = computed(() => {
     <navbar :class="[navClasses]" v-if="showNavbar" />
 
     <router-view />
-
+    <routerView/>
+    <SvgSprite />
     <app-footer v-show="showFooter" />
 
     <configurator
@@ -54,3 +57,13 @@ const navClasses = computed(() => {
     />
   </main>
 </template>
+
+<script>
+
+export default {
+  name: 'App',
+  components: {
+    SvgSprite
+  },
+}
+</script>

@@ -218,8 +218,8 @@
   <script>
   import { mapActions, mapGetters, mapMutations } from 'vuex';
   import AppHeader from "../.././examples/PageLayout/AppHeader.vue";
-  import PagesPanel from "@/components/ProjectPages/PagesPanel";
-  import PagesList from "@/components/ProjectPages/PagesList";
+  import PagesPanel from "../.././components/ProjectPages/PagesPanel.vue";
+  import PagesList from "../.././components/ProjectPages/PagesList.vue";
   import AppFooter from "../.././examples/PageLayout/AppHeader.vue";
   import InputModalLayout from "../.././components/modals/InputModal.vue";
   
