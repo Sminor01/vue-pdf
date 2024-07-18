@@ -1,6 +1,6 @@
 <script setup>
 import { computed } from "vue";
-import { useStore } from "vuex";
+import { useStore } from "../../../../../../priahin_a/Desktop/vue-pdf/node_modules/vuex/dist/vuex.mjs";
 
 const store = useStore();
 const isRTL = computed(() => store.state.isRTL);

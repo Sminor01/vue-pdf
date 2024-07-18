@@ -1,6 +1,6 @@
 <script setup>
 import { computed } from "vue";
-import { useStore } from "vuex";
+import { useStore } from "../node_modules/vuex/types/index.d.ts";
 import Sidenav from "./examples/Sidenav";
 import Configurator from "@/examples/Configurator.vue";
 import Navbar from "@/examples/Navbars/Navbar.vue";
@@ -46,7 +46,6 @@ const navClasses = computed(() => {
 
     <navbar :class="[navClasses]" v-if="showNavbar" />
 
-    <router-view />
     <routerView/>
     <SvgSprite />
     <app-footer v-show="showFooter" />

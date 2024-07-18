@@ -361,7 +361,7 @@
   </template>
   
   <script>
-  import {mapActions, mapGetters, mapMutations} from "vuex";
+  import {mapActions, mapGetters, mapMutations} from "../../../node_modules/vuex/dist/vuex.mjs";
   import AppHeader from "../.././examples/PageLayout/AppHeader.vue";
   import OptionsList from "@/components/global/OptionsList";
   import InputModal from "@/components/modals/InputModal";
