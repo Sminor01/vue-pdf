@@ -1,2 +1,2 @@
 # vue-pdf
-vue-pdf
+vue-system

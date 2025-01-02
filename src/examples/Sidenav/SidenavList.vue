@@ -24,9 +24,10 @@ const getRoute = () => {
 
       <li class="nav-item">
         <sidenav-item
-          to="/Documents"
-          :class="getRoute() === 'Documents' ? 'active' : ''"
-          :navText="'Documents'">
+          to="/ProjectPage"
+          :class="getRoute() === 'ProjectPage' ? 'active' : ''"
+          :navText="'Задачи / Проекты'"
+        >
           <template v-slot:icon>
             <i class="ni ni-tv-2 text-primary text-sm opacity-10"></i>
           </template>
@@ -35,20 +36,9 @@ const getRoute = () => {
 
       <li class="nav-item">
         <sidenav-item
-          to="/DocumentsView"
-          :class="getRoute() === 'DocView' ? 'active' : ''"
-          :navText="'DocView'">
-          <template v-slot:icon>
-            <i class="ni ni-tv-2 text-primary text-sm opacity-10"></i>
-          </template>
-        </sidenav-item>
-      </li>
-
-      <li class="nav-item">
-        <sidenav-item
-          to="/DocsReader"
-          :class="getRoute() === 'Reader' ? 'active' : ''"
-          :navText="'Reader'"
+          to="/EmployeesList"
+          :class="getRoute() === 'EmployeesList' ? 'active' : ''"
+          :navText="'Список сотрудников'"
         >
           <template v-slot:icon>
             <i class="ni ni-tv-2 text-primary text-sm opacity-10"></i>
@@ -60,7 +50,7 @@ const getRoute = () => {
         <sidenav-item
           to="/DocsEditor"
           :class="getRoute() === 'Editor' ? 'active' : ''"
-          :navText="'Editor'"
+          :navText="' Аналитика '"
         >
           <template v-slot:icon>
             <i

@@ -1,7 +1,7 @@
 <script setup>
 import { computed, ref } from "vue";
-import { useStore } from "vuex";
 import { useRoute } from "vue-router";
+import { useStore } from "vuex";
 import Breadcrumbs from "../Breadcrumbs.vue";
 
 const showMenu = ref(false);
@@ -145,7 +145,7 @@ const closeMenu = () => {
                     </div>
                     <div class="d-flex flex-column justify-content-center">
                       <h6 class="mb-1 text-sm font-weight-normal">
-                        Говой отчёт готов
+                        Вам назначена задача
                       </h6>
                       <p class="mb-0 text-xs text-secondary">
                         <i class="fa fa-clock me-1"></i>

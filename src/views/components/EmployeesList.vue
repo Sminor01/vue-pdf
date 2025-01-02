@@ -1,15 +1,7 @@
-<!-- <script setup>
-// import FilesList from "./components/FilesList.vue";
-</script>
-<template>
-  <div></div>
-</template> -->
-
-
 <template>
     <div class="card">
       <div class="card-header pb-0">
-        <h6>Список документов</h6>
+        <h6>Список сотрудников</h6>
       </div>
       <div class="card-body px-0 pt-0 pb-2">
         <div class="table-responsive p-0">
@@ -19,17 +11,17 @@
                 <th
                   class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"
                 >
-                  Наименование документа
+                  ФИО сотрудника
                 </th>
                 <th
                   class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2"
                 >
-                  Тема
+                  Отдел
                 </th>
                 <th
                   class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"
                 >
-                  Дата
+                  Должность
                 </th>
                 <th class="text-center text-uppercase text-xxs font-weight-border opacity-7 text-secondary opacity-7">
                 </th>
@@ -42,7 +34,7 @@
                     <div>
                     </div>
                     <div class="d-flex flex-column justify-content-center">
-                      <h6 class="mb-0 text-sm">Годовой отчёт отчёт</h6>
+                      <h6 class="mb-0 text-sm">Пряхин А.С.</h6>
                       <p class="text-xs text-secondary mb-0">
                         отчёт
                       </p>
@@ -50,12 +42,12 @@
                   </div>
                 </td>
                 <td>
-                  <p class="text-xs font-weight-bold mb-0">Финансы</p>
-                  <p class="text-xs text-secondary mb-0">Бухгалтерия</p>
+                  <p class="text-xs font-weight-bold mb-0">Разработка ПО</p>
+                  <p class="text-xs text-secondary mb-0">frontend</p>
                 </td>
                 <td class="align-middle text-center">
                   <span class="text-secondary text-xs font-weight-bold"
-                    >23/04/22</span
+                    >Помощник инженера-программиста</span
                   >
                 </td>
                 <td class="align-middle">
