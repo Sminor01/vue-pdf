@@ -1,62 +1,36 @@
 {
-  "name": "vue-system",
-  "version": "4.0.0",
-  "private": false,
-  "author": "",
-  "license": "",
-  "description": "",
-  "homepage": "",
-  "bugs": {
-    "url": ""
-  },
-  "repository": {
-    "type": "git",
-    "url": ""
-  },
+  "name": "nuxt-black-dashboard",
+  "version": "1.1.0",
+  "description": "Nuxt Black Dashboard",
+  "author": "creativetim",
+  "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint",
-    "prettify": "prettier --write ."
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
   },
   "dependencies": {
-    "@popperjs/core": "2.11.8",
-    "bootstrap": "5.3.3",
-    "chart.js": "4.4.1",
-    "core-js": "3.36.0",
-    "dropzone": "6.0.0-beta.2",
-    "less": "^4.2.0",
-    "quill": "1.3.7",
-    "vue": "3.4.19",
-    "vue-count-to": "1.0.13",
-    "vue-flatpickr-component": "11.0.4",
-    "vue-router": "4.3.0",
-    "vuex": "^4.0.2",
-    "webpack": "^5.93.0"
+    "@nuxtjs/pwa": "^3.3.5",
+    "bootstrap": "4.3.1",
+    "chart.js": "2.9.4",
+    "d3": "7.7.0",
+    "element-ui": "2.15.12",
+    "es6-promise": "4.2.8",
+    "fuse.js": "6.6.2",
+    "google-maps": "3.2.1",
+    "nuxt": "2.15.8",
+    "nuxt-i18n": "^6.1.0",
+    "perfect-scrollbar": "^1.5.5",
+    "register-service-worker": "^1.7.2",
+    "tween.js": "16.6.0",
+    "vue-chartjs": "3.5.1",
+    "vue-i18n": "8.0.0",
+    "vue2-transitions": "0.3.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.26.0",
-    "@babel/eslint-parser": "7.23.10",
-    "@babel/preset-env": "^7.26.0",
-    "@babel/preset-typescript": "^7.26.0",
-    "@vue/cli-plugin-babel": "5.0.8",
-    "@vue/cli-plugin-eslint": "5.0.8",
-    "@vue/cli-plugin-router": "5.0.8",
-    "@vue/cli-service": "5.0.8",
-    "@vue/compiler-sfc": "3.4.19",
-    "@vue/eslint-config-prettier": "9.0.0",
-    "awesome-typescript-loader": "^5.2.1",
-    "babel-loader": "^9.2.1",
-    "eslint": "8.56.0",
-    "eslint-plugin-prettier": "5.1.3",
-    "eslint-plugin-vue": "9.21.1",
-    "prettier": "3.2.5",
-    "sass": "1.71.1",
-    "sass-loader": "13.3.2",
-    "ts-loader": "^9.5.1",
-    "typescript": "^5.7.2"
-  },
-  "engines": {
-    "node": ">=8 <=21"
+    "babel-plugin-component": "^1.1.1",
+    "sass": "1.56.2",
+    "sass-loader": "10.1.1"
   }
 }
