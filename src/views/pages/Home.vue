@@ -1,6 +1,6 @@
 <script setup>
-import Documents from "@/views/dashboards/Documents.vue";
+import ProjectList from "../pages/ProjectPage"
 </script>
 <template>
-  <Documents />
+  <ProjectList />
 </template>

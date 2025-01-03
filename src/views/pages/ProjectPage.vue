@@ -1,5 +1,5 @@
 <script setup>
-import AuthorsTable from "./components/ProjectList.vue";
+import AuthorsTable from "@/views/components/ProjectList";
 </script>
 <template>
   <div class="py-4 container-fluid">

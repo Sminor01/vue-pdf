@@ -1,6 +1,6 @@
-import EmployeesList from "@/views/components/EmployeesList.vue";
-import DocsEditor from "@/views/DocsEditor.vue";
-import ProjectPage from "@/views/ProjectPage.vue";
+import AnaliticsPage from "../../src/views/pages/AnaliticsPage.vue"
+import EmploeeysPage from "@/views/pages/EmploeeysPage.vue";
+import ProjectPage from "@/views/pages/ProjectPage.vue";
 import { createRouter, createWebHistory } from "vue-router";
 
 const routes = [
@@ -15,14 +15,14 @@ const routes = [
     component: ProjectPage,
   },
   {
-    path: "/DocsEditor",
-    name: "Editor",
-    component: DocsEditor,
+    path: "/AnaliticsPage",
+    name: "Аналитика",
+    component: AnaliticsPage,
   },
   {
-    path: "/EmployeesList",
+    path: "/EmploeeysPage",
     name: "Список сотрудников",
-    component: EmployeesList,
+    component: EmploeeysPage,
   },
 ];
 
